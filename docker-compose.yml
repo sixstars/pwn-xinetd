@@ -1,0 +1,10 @@
+pwn:
+  build: ./
+  volumes: 
+    - ./share:/home/pwn:ro
+    - ./xinetd:/etc/xinetd.d/xinetd:ro
+    - ./tmp:/tmp:ro
+  ports:
+    - "60001:8888"
+  expose:
+    - "8888"
