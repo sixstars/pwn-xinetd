@@ -1,4 +1,4 @@
 #include <stdio.h>
 int main() {
-    printf("flag{TEST}\n");
+    system("/bin/sh");
 }
