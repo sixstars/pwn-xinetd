@@ -12,4 +12,5 @@ services:
         expose:
             - "8888"
         pids_limit: 1024
-        cpus: '0.5'
+        cpus: 0.5
+        restart: unless-stopped
