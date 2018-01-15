@@ -3,6 +3,7 @@ version: '2.2'
 services:
     pwn:
         build: ./
+        image: sixstars/pwn
         volumes: 
             - ./share:/home/pwn:ro
             - ./xinetd:/etc/xinetd.d/xinetd:ro
