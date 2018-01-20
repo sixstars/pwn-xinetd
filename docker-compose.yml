@@ -15,3 +15,9 @@ services:
         pids_limit: 1024
         cpus: 0.5
         restart: unless-stopped
+        
+networks:
+    default:
+        external:
+            name: pwn
+
