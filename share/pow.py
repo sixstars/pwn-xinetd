@@ -1,7 +1,7 @@
 #!/usr/bin/python3 -u
 # encoding: utf-8
 
-import random, string, sys, subprocess, os
+import random, string, sys, os
 from hashlib import sha256
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -23,5 +23,5 @@ if __name__ == '__main__':
     if not proof_of_work():
         exit(0)
     else:
-        os.execv("/bin/sh", ["sh", "-c", "timeout %s %s" % (sys.argv[2], sys.argv[1])])
+        os.execv("/bin/sh", ["sh", "-c", "timeout %s %s 2>/dev/null" % (sys.argv[2], sys.argv[1])])
 
